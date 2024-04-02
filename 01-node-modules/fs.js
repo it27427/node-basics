@@ -2,8 +2,8 @@
   * Some of File System Module are given below:
 
   * writeFile() => write a file
-  * readFile() => read a file
   * appendFile() => update a file
+  * readFile() => read a file
   * rename() => change name of a file
   * Unlink() => delete a file
   * Exists() => check if file exists
@@ -38,10 +38,19 @@ const fs = require('fs');
 // );
 
 // readFile Module
-fs.readFile('reading.txt', 'utf-8', (err, data) => {
+// fs.readFile('reading.txt', 'utf-8', (err, data) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(data);
+//   }
+// });
+
+// rename Module
+fs.rename('user.txt', 'demo.txt', (err) => {
   if (err) {
     console.log(err);
   } else {
-    console.log(data);
+    console.log('File rename successfully!');
   }
 });
