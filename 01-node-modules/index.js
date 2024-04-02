@@ -1,6 +1,4 @@
-const test = require('./test');
+const { getName, getAge } = require('./test');
 
-console.log(test);
-
-test.getName();
-test.getAge();
+console.log(getName());
+console.log(getAge());
