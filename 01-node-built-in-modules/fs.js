@@ -54,3 +54,12 @@ const fs = require('fs');
 //     console.log('File rename successfully!');
 //   }
 // });
+
+// unlink Module => delete a file
+fs.unlink('delete.txt', (err) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log('File deleted successfully!');
+  }
+});
