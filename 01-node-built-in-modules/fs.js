@@ -56,10 +56,26 @@ const fs = require('fs');
 // });
 
 // unlink Module => delete a file
-fs.unlink('delete.txt', (err) => {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log('File deleted successfully!');
-  }
-});
+// fs.unlink('delete.txt', (err) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log('File deleted successfully!');
+//   }
+// });
+
+// exists Module => check existing file
+// fs.exists('demo.txt', (result) => {
+//   if (result) {
+//     console.log('File found!');
+//   } else {
+//     console.log('File not found!');
+//   }
+// });
+
+// SYNCHRONOS MODULE
+if (fs.existsSync('./demo.txt')) {
+  console.log('File found!');
+} else {
+  console.log('File not found!');
+}
