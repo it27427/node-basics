@@ -12,14 +12,27 @@
 const fs = require('fs');
 
 // writeFile Module
-fs.writeFile(
-  'demo.txt',
-  'Creating a demo file using writeFile Module',
+// fs.writeFile(
+//   'demo.txt',
+//   'Creating a demo file using writeFile Module',
+//   (err) => {
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       console.log('File created successfully!');
+//     }
+//   }
+// );
+
+// appendFile Module
+fs.appendFile(
+  'test.txt',
+  '. Appending this file to test.txt using appendFile Module',
   (err) => {
     if (err) {
       console.log(err);
     } else {
-      console.log('File created successfully!');
+      console.log('File append successfully!');
     }
   }
 );
