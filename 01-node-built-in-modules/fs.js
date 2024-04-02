@@ -5,8 +5,8 @@
   * appendFile() => update a file
   * readFile() => read a file
   * rename() => change name of a file
-  * Unlink() => delete a file
-  * Exists() => check if file exists
+  * unlink() => delete a file
+  * exists() => check if file exists
 */
 
 const fs = require('fs');
@@ -47,10 +47,10 @@ const fs = require('fs');
 // });
 
 // rename Module
-fs.rename('user.txt', 'demo.txt', (err) => {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log('File rename successfully!');
-  }
-});
+// fs.rename('user.txt', 'demo.txt', (err) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log('File rename successfully!');
+//   }
+// });
