@@ -25,14 +25,23 @@ const fs = require('fs');
 // );
 
 // appendFile Module
-fs.appendFile(
-  'test.txt',
-  '. Appending this file to test.txt using appendFile Module',
-  (err) => {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log('File append successfully!');
-    }
+// fs.appendFile(
+//   'test.txt',
+//   '. Appending this file to test.txt using appendFile Module',
+//   (err) => {
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       console.log('File append successfully!');
+//     }
+//   }
+// );
+
+// readFile Module
+fs.readFile('reading.txt', 'utf-8', (err, data) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(data);
   }
-);
+});
