@@ -4,7 +4,7 @@ const PORT = 3001;
 const hostName = '127.0.0.1';
 
 const server = http.createServer((req, res) => {
-  const handleReadFile = (statusCode, fileLocation) => {
+  const handleReadFile = (fileLocation, statusCode, req, res) => {
     fs.readFile(fileLocation, (err, data) => {
       if (err) {
         console.log(err);
@@ -17,13 +17,13 @@ const server = http.createServer((req, res) => {
   };
 
   if (req.url === '/') {
-    handleReadFile(200, './views/index.html');
+    handleReadFile('./views/index.html', 200, req, res);
   } else if (req.url === '/about') {
-    handleReadFile(200, './views/about.html');
+    handleReadFile('./views/about.html', 200, req, res);
   } else if (req.url === '/contact') {
-    handleReadFile(200, './views/contact.html');
+    handleReadFile('./views/contact.html', 200, req, res);
   } else {
-    handleReadFile(404, './views/notfound.html');
+    handleReadFile('./views/notfound.html', 404, req, res);
   }
 });
 
