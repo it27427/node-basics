@@ -10,6 +10,6 @@ const hostName = process.env.DB_HOST;
 app.listen(PORT, () => {
   console.log(
     `Server is successfully listening at: http://${hostName}:${PORT} in ${process.env.NODE_ENV} Mode`
-      .bgCyan
+      .brightYellow
   );
 });
