@@ -4,8 +4,8 @@ const app = express();
 
 app.use(morgan('dev'));
 
-app.get('/', (req, res) => {
-  res.send('<h1>Hello From Express</h1>');
-});
+const homeRoutes = require('./routes/homeRoutes');
+
+app.use('/api/', homeRoutes);
 
 module.exports = app;
