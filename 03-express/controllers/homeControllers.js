@@ -1,5 +1,5 @@
 const getControl = (req, res) => {
-  res.send('<h1>GET request from home route</h1>');
+  res.send('<h1>Hello from home route</h1>');
   res.end();
 };
 
