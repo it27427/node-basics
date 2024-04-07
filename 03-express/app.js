@@ -19,7 +19,7 @@ app.get('/register', (req, res) => {
   res.sendFile(__dirname + '/views/' + 'register.html');
 });
 
-app.get('/login', (req, res) => {
+app.post('/login', (req, res) => {
   res.sendFile(__dirname + '/views/' + 'login.html');
 });
 
