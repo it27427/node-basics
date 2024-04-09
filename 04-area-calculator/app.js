@@ -19,4 +19,17 @@ app.get('/circle', (req, res) => {
   res.sendFile(__dirname + '/views/' + 'circle.html');
 });
 
+app.post('/triangle', (req, res) => {
+  const { base, height } = req.body;
+  const area = 0.5 * base * height;
+
+  res.send(`<h2>Area of triangle is: ${area}</h2>`);
+});
+
+app.post('/circle', (req, res) => {
+  const { radius } = req.body;
+
+  // res.send(`<h2>Area of triangle is: ${area}</h2>`);
+});
+
 module.exports = app;
