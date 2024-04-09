@@ -11,4 +11,12 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/views/' + 'index.html');
 });
 
+app.get('/triangle', (req, res) => {
+  res.sendFile(__dirname + '/views/' + 'triangle.html');
+});
+
+app.get('/circle', (req, res) => {
+  res.sendFile(__dirname + '/views/' + 'circle.html');
+});
+
 module.exports = app;
