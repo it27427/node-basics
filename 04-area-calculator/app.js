@@ -28,8 +28,9 @@ app.post('/triangle', (req, res) => {
 
 app.post('/circle', (req, res) => {
   const { radius } = req.body;
+  const area = Math.PI * radius * radius;
 
-  // res.send(`<h2>Area of triangle is: ${area}</h2>`);
+  res.send(`<h2>Area of circle is: ${area}</h2>`);
 });
 
 module.exports = app;
