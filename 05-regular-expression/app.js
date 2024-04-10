@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/products/:id([0-9]{3})', (req, res) => {
-  // ROUTER-PARAMS
+  // ROUTER-PARAMETER
   res.send(`<h1>Product id : ${req.params.id}</h1>`);
 });
 
