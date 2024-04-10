@@ -16,4 +16,10 @@ app.get('/', (req, res) => {
   res.send('<h1>Hello from home route</h1>');
 });
 
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
+
 module.exports = app;
