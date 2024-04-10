@@ -9,5 +9,3 @@ app.listen(PORT, () => {
       .bgCyan
   );
 });
-
-module.exports = server;
