@@ -16,6 +16,10 @@ app.get('/products/:id([0-9]+)', (req, res) => {
   res.send(`<h1>Product id : ${req.params.id}</h1>`);
 });
 
+app.get('/products/:title([a-zA-Z]{3})', (req, res) => {
+  res.send(`<h1>Product title : ${req.params.title}</h1>`);
+});
+
 app.use('*', (req, res) => {
   res.status(404).send({
     message: 'Not a valid route',
