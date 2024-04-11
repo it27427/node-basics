@@ -13,9 +13,9 @@ app.use(express.json());
 app.use(morgan('dev'));
 
 // BAD-UEL MIDDLEWARE
-app.use((req, res, next) => {
-  res.send('<h2>Bad URL Request...</h2>');
-});
+// app.use((req, res, next) => {
+//   res.send('<h2>Bad URL Request...</h2>');
+// });
 
 // Error handling middleware
 app.use((err, req, res, next) => {
