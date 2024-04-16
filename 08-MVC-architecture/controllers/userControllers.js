@@ -2,7 +2,7 @@ const path = require('path');
 const users = require('../models/usersModel');
 
 const getUsers = (req, res) => {
-  res.sendFile(path.join(__dirname + '../views/users.html'));
+  res.sendFile(path.join(__dirname + '/../views/users.html'));
 };
 
 const createUsers = (req, res) => {
