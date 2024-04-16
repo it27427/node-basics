@@ -1,16 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-const htmlForm = `
-<form>
-  <input type="text" name="name" placeholder="Enter name" />
-  <input type="number" name="age" placeholder="Enter age" />
-  <button type="submit">Save User</button>
-</form>
-`;
+const { addUser } = require('../controllers/userControllers');
 
-router.get('/users', (req, res) => {
-  res.send('Hello from user routes');
-});
+router.get('/users', addUser);
 
 module.exports = router;
