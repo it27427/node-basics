@@ -15,8 +15,10 @@ app.use(cors());
 app.use(morgan('dev'));
 
 const homeRouter = require('./routes/home.routes');
+const userRouter = require('./routes/user.routes');
 
 app.use(homeRouter);
+app.use(userRouter);
 
 app.use((req, res, next) => {
   res.status(404).sendFile(__dirname + '/views/error.html');
