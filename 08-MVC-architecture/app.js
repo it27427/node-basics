@@ -17,4 +17,11 @@ const homeRoutes = require('./routes/homeRoutes');
 // GET-HOME
 app.get('/', homeRoutes);
 
+// NOT-FOUND
+app.use((req, res, next) => {
+  res.status(404).json({
+    message: 'Resource Not Found!',
+  });
+});
+
 module.exports = app;
