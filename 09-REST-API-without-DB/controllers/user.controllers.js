@@ -21,9 +21,18 @@ const createUser = (req, res) => {
 };
 
 const updateUser = (req, res) => {
-  res.status(200).json({
-    message: 'User updated successfully',
-  });
+  const id = req.params.id;
+  const { name, email, phone } = req.body;
+
+  users
+    .filter((user) => user.id === id)
+    .map((selectedUser) => {
+      selectedUser.name = name;
+      selectedUser.email = email;
+      selectedUser.phone = phone;
+    });
+
+  res.status(200).json(users);
 };
 
 module.exports = {

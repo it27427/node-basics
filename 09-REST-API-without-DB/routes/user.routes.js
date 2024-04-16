@@ -9,6 +9,6 @@ const {
 
 router.get('/', getAllUsers);
 router.post('/', createUser);
-router.put('/', updateUser);
+router.put('/:id', updateUser);
 
 module.exports = router;
