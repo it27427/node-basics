@@ -135,5 +135,5 @@ dist
 .env.local
 .env.staging
 
-config/.env
-config/dotenv.env
+config/.env/
+config/dotenv.env/ 
