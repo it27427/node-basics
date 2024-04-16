@@ -12,11 +12,11 @@ app.use(bodyParser.json());
 app.use(express.json());
 app.use(morgan('dev'));
 
-const homeRoutes = require('./routes/homeRoutes');
-const userRoutes = require('./routes/userRoutes');
+const homeRouter = require('./routes/homeRoutes');
+const userRouter = require('./routes/userRoutes');
 
-app.use('/', homeRoutes);
-app.use('/', userRoutes);
+app.use(homeRouter);
+app.use(userRouter);
 
 // NOT-FOUND
 app.use((req, res, next) => {
