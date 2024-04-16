@@ -1,7 +1,7 @@
 const path = require('path');
 const users = require('../models/users.model');
 
-const getUserController = (req, res) => {
+const getAllUsers = (req, res) => {
   // res.sendFile(path.join(__dirname + '/../views/register.html'));
   res.status(200).json({
     users,
@@ -9,5 +9,5 @@ const getUserController = (req, res) => {
 };
 
 module.exports = {
-  getUserController,
+  getAllUsers,
 };
