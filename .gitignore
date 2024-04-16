@@ -134,7 +134,5 @@ dist
 .env.example
 .env.local
 .env.staging
-dotenv.env
-dotenv.env.example
-dotenv.env.local
-dotenv.env.staging
+
+config/
