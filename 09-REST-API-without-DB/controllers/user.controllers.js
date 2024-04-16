@@ -8,6 +8,10 @@ const getAllUsers = (req, res) => {
   });
 };
 
+const createUser = (req, res) => {
+  // res.sendFile(path.join(__dirname + '/../views/register.html'));
+};
+
 module.exports = {
   getAllUsers,
 };
