@@ -6,8 +6,10 @@ const htmlForm = `
 </form>
 `;
 
-const addUser = (req, res) => {
+const addUsers = (req, res) => {
   res.send(htmlForm);
 };
 
-module.exports = { addUser };
+const viewUsers = (req, res) => {};
+
+module.exports = { addUsers, viewUsers };
