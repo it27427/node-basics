@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 
 // CONFIGURED-DOTENV
-dotenv.config({ path: './config/dotenv.dotenv' });
+dotenv.config({ path: './config/dotenv.env' });
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
