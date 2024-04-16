@@ -13,9 +13,10 @@ app.use(express.json());
 app.use(morgan('dev'));
 
 const homeRoutes = require('./routes/homeRoutes');
+const userRoutes = require('./routes/userRoutes');
 
-// GET-HOME
-app.get('/', homeRoutes);
+app.use('/', homeRoutes);
+app.use('/', userRoutes);
 
 // NOT-FOUND
 app.use((req, res, next) => {
