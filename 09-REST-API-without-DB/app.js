@@ -18,4 +18,8 @@ const homeRouter = require('./routes/home.routes');
 
 app.use(homeRouter);
 
+app.use((req, res) => {
+  res.status(404).sendFile(__dirname + '/views/error.html');
+});
+
 module.exports = app;
