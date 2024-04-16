@@ -29,6 +29,20 @@ const users = [
   },
 ];
 
-const addUsers = (req, res) => {};
+const createUsers = (req, res) => {
+  const name = req.body.name;
+  const age = Number(req.body.age);
+  const user = {
+    name,
+    age,
+  };
 
-module.exports = { getUsers, addUsers };
+  users.push(user);
+
+  res.status(201).json({
+    success: true,
+    users,
+  });
+};
+
+module.exports = { getUsers, createUsers };
