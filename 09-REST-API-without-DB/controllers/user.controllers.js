@@ -17,10 +17,17 @@ const createUser = (req, res) => {
     phone: req.phone,
   };
   users.push(newUser);
-  // res.sendFile(path.join(__dirname + '/../views/register.html'));
+  res.status(200).json(users);
+};
+
+const updateUser = (req, res) => {
+  res.status(200).json({
+    message: 'User updated successfully',
+  });
 };
 
 module.exports = {
   getAllUsers,
   createUser,
+  updateUser,
 };
