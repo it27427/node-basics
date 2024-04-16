@@ -6,10 +6,29 @@ const htmlForm = `
 </form>
 `;
 
-const addUsers = (req, res) => {
+const getUsers = (req, res) => {
   res.send(htmlForm);
 };
 
-const viewUsers = (req, res) => {};
+const users = [
+  {
+    name: 'Istiak Hossain Tushar',
+    age: 31,
+  },
+  {
+    name: 'Abdullah Al Mamun',
+    age: 32,
+  },
+  {
+    name: 'Israt Jahan Hira',
+    age: 26,
+  },
+  {
+    name: 'Rubaiyat Jahan Nishi',
+    age: 21,
+  },
+];
 
-module.exports = { addUsers, viewUsers };
+const addUsers = (req, res) => {};
+
+module.exports = { getUsers, addUsers };
