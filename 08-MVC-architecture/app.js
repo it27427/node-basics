@@ -12,9 +12,9 @@ app.use(bodyParser.json());
 app.use(express.json());
 app.use(morgan('dev'));
 
+const homeRoutes = require('./routes/homeRoutes');
+
 // GET-HOME
-app.get('/', (req, res) => {
-  res.send('<h1>Hello from Home Route</h1>');
-});
+app.get('/', homeRoutes);
 
 module.exports = app;
