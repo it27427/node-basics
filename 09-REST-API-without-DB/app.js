@@ -3,14 +3,19 @@ const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const dotenv = require('dotenv');
+const morgan = require('morgan');
 
 // DOT-ENV CONFIG
 dotenv.config({ path: './config/.env' });
 
-const PORT = process.env.PORT;
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(express.json());
+app.use(cors());
+app.use(morgan('dev'));
 
-app.listen(PORT, () => {
-  console.log(
-    `Server is listening at http://localhost:${PORT} in ${process.env.NODE_ENV} mode`
-  );
-});
+const homeRouter = require('./routes/home.routes');
+
+app.use(homeRouter);
+
+module.exports = app;
