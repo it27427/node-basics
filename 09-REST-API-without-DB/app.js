@@ -22,7 +22,7 @@ app.use((req, res, next) => {
   res.status(404).sendFile(__dirname + '/views/error.html');
 });
 
-app.use((req, res, next) => {
+app.use((err, req, res, next) => {
   res.status(500).sendFile(__dirname + '/views/server.html');
 });
 
