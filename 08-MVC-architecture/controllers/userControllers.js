@@ -1,15 +1,8 @@
+const path = require('path');
 const users = require('../models/usersModel');
 
-const htmlForm = `
-<form method="POST" action="/users">
-  <input type="text" name="name" placeholder="Enter name" />
-  <input type="number" name="age" placeholder="Enter age" />
-  <button type="submit">Save User</button>
-</form>
-`;
-
 const getUsers = (req, res) => {
-  res.send(htmlForm);
+  res.sendFile(path.join(__dirname + '../views/users.html'));
 };
 
 const createUsers = (req, res) => {
