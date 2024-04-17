@@ -11,6 +11,6 @@ const {
 router.get('/', getAllUsers);
 router.post('/', createUser);
 router.put('/:id', updateUser);
-router.put('/:id', deleteUser);
+router.delete('/:id', deleteUser);
 
 module.exports = router;
