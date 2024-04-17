@@ -35,8 +35,13 @@ const updateUser = (req, res) => {
   res.status(200).json(users);
 };
 
+const deleteUser = (req, res) => {
+  const id = req.params.id;
+};
+
 module.exports = {
   getAllUsers,
   createUser,
   updateUser,
+  deleteUser,
 };
