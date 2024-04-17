@@ -12,9 +12,9 @@ const getAllUsers = (req, res) => {
 const createUser = (req, res) => {
   const newUser = {
     id: uuidv4(),
-    name: req.name,
-    email: req.email,
-    phone: req.phone,
+    name: req.body.name,
+    email: req.body.email,
+    phone: req.body.phone,
   };
   users.push(newUser);
   res.status(200).json(users);
