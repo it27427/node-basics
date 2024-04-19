@@ -11,7 +11,7 @@ const getSingleUser = (req, res) => {
 };
 
 const createUser = (req, res) => {
-  res.status(200).json({
+  res.status(201).json({
     message: 'Create User',
   });
 };
