@@ -4,6 +4,13 @@ const getAllUsers = (req, res) => {
   });
 };
 
+const getSingleUser = (req, res) => {
+  res.status(200).json({
+    message: 'Single User',
+  });
+};
+
 module.exports = {
   getAllUsers,
+  getSingleUser,
 };
