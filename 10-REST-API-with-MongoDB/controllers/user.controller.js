@@ -22,9 +22,16 @@ const updateUser = (req, res) => {
   });
 };
 
+const deleteUser = (req, res) => {
+  res.status(201).json({
+    message: 'Deleted User',
+  });
+};
+
 module.exports = {
   getAllUsers,
   getSingleUser,
   createUser,
   updateUser,
+  deleteUser,
 };
