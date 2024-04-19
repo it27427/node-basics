@@ -12,7 +12,13 @@ const getSingleUser = (req, res) => {
 
 const createUser = (req, res) => {
   res.status(201).json({
-    message: 'Create User',
+    message: 'Created User',
+  });
+};
+
+const updateUser = (req, res) => {
+  res.status(201).json({
+    message: 'Updated User',
   });
 };
 
@@ -20,4 +26,5 @@ module.exports = {
   getAllUsers,
   getSingleUser,
   createUser,
+  updateUser,
 };
