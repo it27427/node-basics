@@ -16,8 +16,10 @@ app.use(morgan('dev'));
 
 // IMPORT-ROUTES
 const homeRouter = require('./routes/home.route');
+const userRouter = require('./routes/user.route');
 
 app.use(homeRouter);
+app.use('/api', userRouter);
 
 // ERROR-NOT-FOUND - 404
 app.use((req, res, next) => {
