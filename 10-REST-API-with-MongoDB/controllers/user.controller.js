@@ -1,3 +1,6 @@
+const { v4: uuidv4 } = require('uuid');
+const User = require('../models/user.model');
+
 const getAllUsers = (req, res) => {
   res.status(200).json({
     message: 'All Users',
@@ -11,8 +14,16 @@ const getSingleUser = (req, res) => {
 };
 
 const createUser = (req, res) => {
+  const newUser = new User({
+    id: uuidv4(),
+    name: req.body.name,
+    email: req.body.email,
+    phone: req.body.phone,
+  });
+
   res.status(201).json({
     message: 'Created User',
+    newUser,
   });
 };
 
