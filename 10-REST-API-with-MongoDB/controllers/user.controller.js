@@ -13,18 +13,19 @@ const getSingleUser = (req, res) => {
   });
 };
 
-const createUser = (req, res) => {
-  const newUser = new User({
-    id: uuidv4(),
-    name: req.body.name,
-    email: req.body.email,
-    phone: req.body.phone,
-  });
-
-  res.status(201).json({
-    message: 'Created User',
-    newUser,
-  });
+const createUser = async (req, res) => {
+  try {
+    const newUser = new User({
+      id: uuidv4(),
+      name: req.body.name,
+      email: req.body.email,
+      phone: req.body.phone,
+    });
+    await newUser.save();
+    res.status(201).json(newUser);
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 const updateUser = (req, res) => {
