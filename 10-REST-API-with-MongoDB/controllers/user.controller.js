@@ -10,10 +10,13 @@ const getAllUsers = async (req, res) => {
   }
 };
 
-const getSingleUser = (req, res) => {
-  res.status(200).json({
-    message: 'Single User',
-  });
+const getSingleUser = async (req, res) => {
+  try {
+    const user = await User.findOne({ id: req.params.id });
+    res.status(200).send(user);
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
 };
 
 const createUser = async (req, res) => {
