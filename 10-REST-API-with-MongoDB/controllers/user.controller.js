@@ -10,7 +10,14 @@ const getSingleUser = (req, res) => {
   });
 };
 
+const createUser = (req, res) => {
+  res.status(200).json({
+    message: 'Create User',
+  });
+};
+
 module.exports = {
   getAllUsers,
   getSingleUser,
+  createUser,
 };
