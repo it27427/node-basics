@@ -40,10 +40,15 @@ const updateUser = (req, res) => {
   });
 };
 
-const deleteUser = (req, res) => {
-  res.status(200).json({
-    message: 'Deleted User',
-  });
+const deleteUser = async (req, res) => {
+  try {
+    await User.deleteOne({ id: req.params.id });
+    res.status(200).json({
+      message: 'User Deleted Successfully Done!',
+    });
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
 };
 
 module.exports = {
