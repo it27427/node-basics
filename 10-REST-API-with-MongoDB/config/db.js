@@ -6,7 +6,7 @@ const dbURL = config.db.url;
 mongoose
   .connect(dbURL)
   .then(() => {
-    console.log(`Database Connected Successfylly`.bgBrightCyan);
+    console.log(`Database Connected Successfylly...`.bgBrightMagenta);
   })
   .catch((error) => {
     console.log(error);
