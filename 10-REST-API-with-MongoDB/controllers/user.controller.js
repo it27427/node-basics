@@ -17,13 +17,13 @@ const createUser = (req, res) => {
 };
 
 const updateUser = (req, res) => {
-  res.status(201).json({
+  res.status(200).json({
     message: 'Updated User',
   });
 };
 
 const deleteUser = (req, res) => {
-  res.status(201).json({
+  res.status(200).json({
     message: 'Deleted User',
   });
 };
