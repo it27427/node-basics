@@ -14,8 +14,10 @@ app.use(morgan('dev'));
 
 // IMPORT-ROUTES
 const homeRouter = require('./routes/home.route');
+const uploadRouter = require('./routes/upload.route');
 
 app.use(homeRouter);
+app.use('/uploads', uploadRouter);
 
 // ERROR-NOT-FOUND
 app.use((req, res, next) => {
