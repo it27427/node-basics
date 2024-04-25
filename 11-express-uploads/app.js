@@ -14,16 +14,12 @@ app.use(morgan('dev'));
 
 // ERROR-NOT-FOUND
 app.use((req, res, next) => {
-  res.status(404).json({
-    message: 'Error 404! Page Not Found!!',
-  });
+  res.status(404).sendFile(__dirname + '/views/error.html');
 });
 
 // INTERNAL-SERVER-ERROR
 app.use((err, req, res, next) => {
-  res.status(500).json({
-    message: 'Something Broken!',
-  });
+  res.status(500).sendFile(__dirname + '/views/server.html');
 });
 
 module.exports = app;
