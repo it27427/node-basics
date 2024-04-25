@@ -31,7 +31,7 @@
               Upload Files
             </h1>
 
-            <form action="/uploads" method="POST" class="d-flex flex-column gap-3">
+            <form action="/uploads" method="POST" enctype="multipart/form-data" class="d-flex flex-column gap-3">
               <div class="d-flex flex-column gap-1">
                 <label for="uploadimage" class="form-label">Choose Image</label>
                 <input type="file" name="image" class="form-control" id="uploadimage" />
